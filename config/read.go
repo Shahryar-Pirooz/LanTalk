@@ -22,6 +22,7 @@ func Read(path string) (Config, error) {
 	}
 	viper.AddConfigPath(newPath)
 	viper.AutomaticEnv()
+	viper.Debug()
 	if err := viper.ReadInConfig(); err != nil {
 		if _, ok := err.(viper.ConfigFileNotFoundError); ok {
 			return cfg, errors.New("config file not found")

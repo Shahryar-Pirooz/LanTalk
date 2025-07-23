@@ -1,10 +1,10 @@
 package config
 
 type Config struct {
-	Server Server
+	Server Server `mapstructure:"server"`
 }
 
 type Server struct {
-	Address string
-	Port    uint
+	Address string `mapstructure:"address"`
+	Port    uint   `mapstructure:"port"`
 }
