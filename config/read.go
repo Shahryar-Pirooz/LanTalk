@@ -20,9 +20,8 @@ func Read(path string) (Config, error) {
 	if err != nil {
 		return cfg, errors.New("failed to get absolute path: " + err.Error())
 	}
-	viper.AddConfigPath(newPath)
+	viper.SetConfigFile(newPath)
 	viper.AutomaticEnv()
-	viper.Debug()
 	if err := viper.ReadInConfig(); err != nil {
 		if _, ok := err.(viper.ConfigFileNotFoundError); ok {
 			return cfg, errors.New("config file not found")
