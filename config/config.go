@@ -1,10 +1,10 @@
 package config
 
 type Config struct {
-	HttpServer HttpServer `mapstructure:"http"`
+	NatsServer NatsServer `mapstructure:"nats"`
 }
 
-type HttpServer struct {
+type NatsServer struct {
 	Address string `mapstructure:"address"`
 	Port    uint   `mapstructure:"port"`
 }
