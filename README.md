@@ -1,4 +1,4 @@
-# Coming Soon
+# LanTalk
 LanTalk is a lightweight, local network chat application designed for fast and secure communication within your LAN. It allows users to send instant messages, share files, and create group chats without relying on external servers or internet connectivity.
 
 ## Features
